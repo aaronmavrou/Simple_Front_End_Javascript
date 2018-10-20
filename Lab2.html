@@ -4,12 +4,18 @@
     <title>SE 3316 - Lab 2</title>
     <link rel="stylesheet" href="Lab2.css"/>
     <meta charset="UTF-8">
-    <script type='text/javascript' src='script.js'></script>
+    <script type='text/javascript', src='script.js'></script>
 </head>
 <body>
 <header>
     <h1>Sporting Goods Store</h1>
 </header>
+
+<form> Language <br>
+    <input type="radio", name = "language", id = "english", checked= "checked", onclick= changeLanguage() > English <br>
+    <input type="radio", name = "language", id="francais" onclick= changeLanguage()> Francais <br>
+</form>
+
 
 <ol id=”Items”>
     <div>
@@ -26,25 +32,45 @@
             </p>
             <p>Quantity
                 <input type="text", value="1", max = "5",min = "1", id="stickQuantity">
-                <button type="button">Add to Basket!</button>
+                <button type="button" onclick = alertMe()>Add to Basket! </button>
             </p>
         </li>
     </div>
 
-        <li>Bat</li>    
-        <li>Football</li>    
-        <li>Glove</li>
-        <li>Shoes</li>
-        <li>Baseball</li>
-        <li>Puck</li>
-        <li>Basketball</li>
-        <li>Racket</li>
-        <li>Gatorade</li>
+        <li>
+            <label id="Bat">Bat</label>
+        </li> 
+        <li>
+            <label id="Football">Football</label>
+        </li>    
+        <li>
+            <label id="Glove">Glove</label>
+        </li> 
+        <li>
+            <label id="Shoes">Shoes</label>
+        </li> 
+        <li>
+            <label id="Baseball">Baseball</label>
+        </li> 
+        <li>
+            <label id="Puck">Puck</label>
+        </li> 
+        <li>
+            <label id="Basketball">Basketball</label>
+        </li> 
+        <li>
+            <label id="Racket">Racket</label>
+        </li> 
+         <li>
+            <label id="Gatorade">Gatorade</label>
+        </li> 
 </ol>
 Pick an item:
 <input type="text" id="newfruit">
 <h1>Basket</h1>
-<ol id=”basket”></ol>
+<ol id="basket"></ol>
+
+<label id = "tester"> testing123</label>
 
 </body>
 </html>
