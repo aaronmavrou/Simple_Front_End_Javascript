@@ -31,7 +31,7 @@
             </p>
             <p>Quantity
                 <input type="number" value="1" id="stickQuantity">
-                <button type="button" id = "stickButton" onclick = "quantity('stickQuantity','sticksLeft'); updateCart('Stick','stickQuantity','sticksLeft','stickPrice','stickButton')">Add to Basket! </button>
+                <button type="button" onclick = "quantity('Stick','stickQuantity','sticksLeft','stickPrice','stickTax')">Add to Basket! </button>
             </p>
         </li>
     </div>
@@ -174,8 +174,10 @@
 </ol>
 Pick an item:
 <input type="text" id="newItem">
-<h1>Basket</h1>
-<ol id="basket"></ol>
+<button type ="button" onclick= updateCart()> Add</button>
+<h1>Basket
+    <div id="basket"></div>
+</h1>
 
 </body>
 </html>
