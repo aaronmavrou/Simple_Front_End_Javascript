@@ -1,5 +1,26 @@
 
 
+function passwordStuff(){
+    var stickEnter = document.createElement("button");
+    stickEnter.type = "button";
+    stickEnter.onclick = "adminEnters()"
+    
+    var stickInput = document.createElement("input");
+    stickInput.type = "number";
+    stickInput.id = "stickQuantityId";
+    stickInput.value = document.getElementById("sticksLeft");
+    
+    
+    document.getElementById("stickAdmin").appendChild(stickEnter);
+    document.getElementById("stickAdmin").appendChild(stickInput);
+
+
+}
+
+function adminEnters(newQuantityID, newTaxRateID, newQuantity, newTaxRate){
+
+}
+
 function quantity(itemId, amountId, quantityId, priceId, taxId, buttonId) {
     var itemsLeft = document.getElementById(quantityId).innerHTML;
     var itemsPurchased = document.getElementById(amountId).value;
@@ -37,14 +58,14 @@ function updateCart(itemId, amountId, priceId, taxId) {
 }
 
 function showCart() {
-    cartData = '<table><tr><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>';
+    cartData = '<table><tr><th>Product</th><th>Quantity</th><th>Price</th><th>Subtotal</th><th>Tax</th><th>Total</th></tr>';
     total = 0;
 
     for (i = 0; i < inames.length; i++) {
         total += iqtyp[i] * iprice[i] * (1 + itax[i]);
-        cartData += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td>" + iprice[i] + "</td><td>" + iqtyp[i] * iprice[i] * (1 + itax[i]) + "</td><td><button onclick='deleteElement(" + i + ")'>Delete</button></td>" + "</td><td><button onclick='increaseQuantity(" + i + ")'>+</button></td>" + "</td><td><button onclick='decreaseQuantity(" + i + ")'>-</button></td></tr>";
+        cartData += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td>" + iprice[i] + "</td><td>" + iprice[i]*iqtyp[i] + "</td><td>" + itax[i] + "</td><td>" + iqtyp[i] * iprice[i] * (1 + itax[i]) + "</td><td><button onclick='deleteElement(" + i + ")'>Delete</button></td>" + "</td><td><button onclick='increaseQuantity(" + i + ")'>+</button></td>" + "</td><td><button onclick='decreaseQuantity(" + i + ")'>-</button></td></tr>";
     }
-    cartData += '<tr><td></td><td></td><td><t/d><td>' + total + '</td></tr></table>';
+    cartData += '<tr><td></td><td></td><td></td><td></td><td><t/d><td>' + total + '</td></tr></table>';
 
     document.getElementById('basket').innerHTML = cartData;
 }
