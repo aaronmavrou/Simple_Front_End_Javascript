@@ -44,36 +44,132 @@
             </p>
             <p>Price:
                 <span id="batPrice">30.00</span>
-                <span id="batTax">13%</span>
+                <span id="batTax">0.13</span>
             </p>
             <p>Quantity
-                <input type="text", value="1", max = "5",min = "1", id="batQuantity">
-                <button type="button" onclick = alertMe()>Add to Basket! </button>
+                <input type="number" value="1" id="batQuantity">
+                <button type="button" onclick = "quantity('batQuantity','batsLeft')">Add to Basket! </button>
             </p>
         </li> 
         <li>
             <label id="Football">Football</label>
+            <img src="images/football.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="footballsLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="footballPrice">25.00</span>
+                <span id="footballTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="footballQuantity">
+                <button type="button" onclick = "quantity('footballQuantity','footballsLeft')">Add to Basket! </button>
+            </p>
         </li>    
         <li>
             <label id="Glove">Glove</label>
+            <img src="images/glove.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="glovesLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="glovePrice">40.00</span>
+                <span id="gloveTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="gloveQuantity">
+                <button type="button" onclick = "quantity('gloveQuantity','glovesLeft')">Add to Basket! </button>
+            </p>
         </li> 
         <li>
             <label id="Shoes">Shoes</label>
+            <img src="images/shoes.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="shoesLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="shoePrice">120.00</span>
+                <span id="shoeTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="shoeQuantity">
+                <button type="button" onclick = "quantity('shoeQuantity','shoesLeft')">Add to Basket! </button>
+            </p>
         </li> 
         <li>
             <label id="Baseball">Baseball</label>
+            <img src="images/baseball.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="baseballsLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="baseballPrice">8.00</span>
+                <span id="baseballTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="baseballQuantity">
+                <button type="button" onclick = "quantity('baseballQuantity','baseballsLeft')">Add to Basket! </button>
+            </p>
         </li> 
         <li>
             <label id="Puck">Puck</label>
+            <img src="images/puck.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="pucksLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="puckPrice">5.00</span>
+                <span id="puckTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="puckQuantity">
+                <button type="button" onclick = "quantity('puckQuantity','pucksLeft')">Add to Basket! </button>
+            </p>
         </li> 
         <li>
             <label id="Basketball">Basketball</label>
+            <img src="images/basketball.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="basketballLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="basketballPrice">45.00</span>
+                <span id="basketballTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="basketballQuantity">
+                <button type="button" onclick = "quantity('basketballQuantity','basketballsLeft')">Add to Basket! </button>
+            </p>
         </li> 
         <li>
             <label id="Racket">Racket</label>
+            <img src="images/racket.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="racketsLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="racketPrice">80.00</span>
+                <span id="racketTax">0.13</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="racketQuantity">
+                <button type="button" onclick = "quantity('racketQuantity','racketsLeft')">Add to Basket! </button>
+            </p>
         </li> 
          <li>
             <label id="Gatorade">Gatorade</label>
+            <img src="images/gatorade.jpg" width = "100" height="100" alt = "Stick">
+            <p>Items Available:
+                <span id="gatoradesLeft">5</span>
+            </p>
+            <p>Price:
+                <span id="gatoradePrice">2.00</span>
+                <span id="gatoradeTax">0.00</span>
+            </p>
+            <p>Quantity
+                <input type="number" value="1" id="gatoradeQuantity">
+                <button type="button" onclick = "quantity('gatoradeQuantity','gatoradesLeft')">Add to Basket! </button>
+            </p>
         </li> 
 </ol>
 Pick an item:

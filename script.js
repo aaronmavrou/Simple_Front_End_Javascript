@@ -3,16 +3,14 @@
 function quantity(qId, leftId){
     var itemsLeft = document.getElementById(leftId).innerHTML;
     var itemsPurchased = document.getElementById(qId).value;
-   // document.getElementById("Stick").innerHTML = parseInt(itemsLeft);
     
-   // if (parseInt(itemsPurchased) > parseInt(itmesLeft)){
-        //document.getElementById("Stick").innerHTML = parseInt(itemsLeft) - parseInt(itemsPurchased);
+    if ((parseInt(itemsLeft)-parseInt(itemsPurchased)) < 0){
         alert("This is more than the available quantity. Please enter a new quantity in the range");
-    //}
+    }
 
-    //else {
-     //   parseInt(leftId) = parseInt(leftId)-parseInt(qId);
-    //}
+    else {
+        document.getElementById(leftId).innerHTML = parseInt(itemsLeft)-parseInt(itemsPurchased);
+    }
 }
 
 function updateCart(){
