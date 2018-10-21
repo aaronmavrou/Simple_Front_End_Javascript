@@ -12,10 +12,41 @@ function quantity(qId, leftId){
         document.getElementById(leftId).innerHTML = parseInt(itemsLeft)-parseInt(itemsPurchased);
     }
 }
+inames = [];
+iqtyp = [];
+iprice = [];
 
-function updateCart(){
-
+function updateCart(itemId, amountId, quantityId, priceId, buttonId){
+    if (parseFloat(document.getElementById(quantityId).innerHTML) > document.getElementById(amountId).value){
+        document.getElementById(quantityId).innerHTML = parseFloat(document.getElementById(quantityId).innerHTML)-document.getElementById(amountId).value;
+        inames.push(document.getElementById(itemId).textContent);
+        iqtyp.push(document.getElementById(amountId).value);
+        iprice.push(parseFloat(document.getElementById(priceId).innerHTML));
+        showCart();
+    }
+    else{
+        alert("This is more than the available quantity. Please enter a new quantity in the range");
+    }
 }
+
+function showCart(){
+    cartData = '<table><tr><th>Product</th><th>Quantity</th><th>Total</th></tr>';
+    total = 0;
+
+    for(i=0; i<inames.length; i++){
+        total+= iqtyp[i]*iprice[i];
+        cartData += "<tr><td>" + inames[i] + "</td><td>" + iqtyp[i] + "</td><td>" + iprice[i] + "</td><td>"+ iqtyp[i]*iprice[i] + "</td><td><button onclick='deleteElement(" + i +")'>Deletd</button></td></tr>"
+    }
+    cartData += '<tr><td></td><td></td><td><t/d><td>' + total + '</td></tr></table>';
+}
+
+function deleteElement(x){
+    inames.splice(x,1);
+    iqtyp.splice (x,1);
+    iprice.splice(x,1);
+    showCart();
+}
+
 
 
 function changeLanguage(){
