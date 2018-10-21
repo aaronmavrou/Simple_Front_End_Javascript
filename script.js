@@ -1,16 +1,23 @@
 
 
+function quantity(qId, leftId){
+    var itemsLeft = document.getElementById(leftId).innerHTML;
+    var itemsPurchased = document.getElementById(qId).value;
+   // document.getElementById("Stick").innerHTML = parseInt(itemsLeft);
+    
+   // if (parseInt(itemsPurchased) > parseInt(itmesLeft)){
+        //document.getElementById("Stick").innerHTML = parseInt(itemsLeft) - parseInt(itemsPurchased);
+        alert("This is more than the available quantity. Please enter a new quantity in the range");
+    //}
 
-function alertMe() {
-    alert("fuck this shit");
+    //else {
+     //   parseInt(leftId) = parseInt(leftId)-parseInt(qId);
+    //}
 }
 
-function overMax(){
-    alert("This is more than the available quantity. Please enter a new quantity in the range");
+function updateCart(){
+
 }
- function (){
-     
- }
 
 
 function changeLanguage(){
