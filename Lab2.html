@@ -11,8 +11,8 @@
     <h1>Sporting Goods Store</h1>
 </header>
 <p>
-    Admin Password: <input type="password" id="myPassword" value = "111" style ="visibility: hidden">
-    <button onclick="passwordStuff()">Login</button>
+    Admin Password: <input type="text" id="myPassword">
+    <button id = "passButtonId" onclick="password('myPassword')">Login</button>
 </p>
 <form> Language <br>
     <input type="radio", name = "language", id = "english", checked= "checked", onclick= changeLanguage() > English <br>
@@ -21,7 +21,7 @@
 
 
 <ol id=”Items”>
-    <div>
+    <div id = stick>
         <li>
             <label id="Stick">Stick</label>
             <img src="images/hockeyStick.jpg" width = "100" height="100" alt = "Stick">

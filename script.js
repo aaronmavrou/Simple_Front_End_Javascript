@@ -1,24 +1,65 @@
 
+taxIds = ['stickTax', 'batTax', 'footballTax' , 'gloveTax', 'shoeTax', 'baseballTax', 'puckTax', 'basketballTax', 'racketTax', 'gatoradeTax']
+qIds = ['sticksLeft', 'batsLeft', 'footballsLeft', 'glovesLeft', 'shoesLeft', 'baseballsLeft', 'pucksLeft', 'basketballsLeft', 'racketsLeft', 'gatoradesLeft']
+itemIds = ['stick', 'bat', 'football', 'glove', 'shoes', 'baseball', 'puck', 'basketball','racket', 'gatorade']
 
 function passwordStuff(){
-    var stickEnter = document.createElement("button");
-    stickEnter.type = "button";
-    stickEnter.onclick = "adminEnters()"
-    
-    var stickInput = document.createElement("input");
-    stickInput.type = "number";
-    stickInput.id = "stickQuantityId";
-    stickInput.value = document.getElementById("sticksLeft");
-    
-    
-    document.getElementById("stickAdmin").appendChild(stickEnter);
-    document.getElementById("stickAdmin").appendChild(stickInput);
+    var t = document.createTextNode("Change Quantity  ");
+    var x = document.createTextNode("Change Tax Rate  ");
+
+    //input for the quantity
+    var stickQ = document.createElement("span");
+    stickQ.appendChild(t);
+    document.getElementById("stickAdmin").appendChild(stickQ);
+
+    var stickInputQuantity = document.createElement("input");
+    stickInputQuantity.type = "number";
+    stickInputQuantity.id = "stickQuantityId";
+    document.getElementById("stickAdmin").appendChild(stickInputQuantity);
+
+    var stickQEnter = document.createElement("button");
+    stickQEnter.type = "button";
+    stickQEnter.innerHTML = "Enter";
+    stickQEnter.setAttribute("onclick", "javascript adminEntersQuantity(" + stickInputQuantity.id+ ','+'sticksLeft'+");");
+    document.getElementById("stickAdmin").appendChild(stickQEnter);
+
+    var stickSpace0 = document.createElement("br");
+    document.getElementById("stickAdmin").appendChild(stickSpace0);
 
 
+
+    var stickT = document.createElement("span");
+    stickT.appendChild(x);
+    document.getElementById("stickAdmin").appendChild(stickT);
+
+    var stickInputTax = document.createElement("input");
+    stickInputTax.type = "number";
+    stickInputTax.id = "stickQuantityId";
+    document.getElementById("stickAdmin").appendChild(stickInputTax)
+
+    var stickTEnter = document.createElement("button");
+    stickTEnter.type = "button";
+    stickTEnter.innerHTML = "Enter";
+    //stickTEnter.onclick = "adminEnters('stickQuantityId', 'taxQuantityId', 'sticksLeft', 'stickTax')"
+    document.getElementById("stickAdmin").appendChild(stickTEnter);
+
+    var stickSpace1 = document.createElement("br");
+    document.getElementById("stickAdmin").appendChild(stickSpace1);
+
+    
 }
 
-function adminEnters(newQuantityID, newTaxRateID, newQuantity, newTaxRate){
 
+function adminEntersQuantity(newQuantityID, actualId ){
+    document.getElementById(actualId).innerHTML = document.getElementById(newQuantityID).value;
+}
+
+function password(passwordId){
+    var jacob = document.getElementById(passwordId).value;
+    if(jacob.toUpperCase() == "123"){
+        alert("it works hoe");
+        passwordStuff();
+    }
 }
 
 function quantity(itemId, amountId, quantityId, priceId, taxId, buttonId) {
