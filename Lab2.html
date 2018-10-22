@@ -1,213 +1,254 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <title>SE 3316 - Lab 2</title>
-    <link rel="stylesheet" href="Lab2.css"/>
+    <link rel="stylesheet" href="Lab2.css" />
     <meta charset="UTF-8">
-    <script type='text/javascript', src='script.js'></script>
+    <script type='text/javascript' , src='script.js'></script>
 </head>
+
 <body>
-<header>
-    <h1>Sporting Goods Store</h1>
-</header>
-<p>
-    Admin Password: <input type="text" id="myPassword">
-    <button id = "passButtonId" onclick="password('myPassword')">Login</button>
-</p>
-<form> Language <br>
-    <input type="radio", name = "language", id = "english", checked= "checked", onclick= changeLanguage() > English <br>
-    <input type="radio", name = "language", id="francais" onclick= "changeLanguage()"> Francais <br>
-</form>
+    <header>
+        <h1>Sporting Goods Store</h1>
+    </header>
+    <div class='PASSWORD'>
+        Admin Password: <input type="text" id="myPassword">
+        <button id="passButtonId" onclick="password('myPassword')">Login</button>
+    </div>
+    <form> Language <br>
+        <input type="radio" , name="language" , id="english" , checked="checked" , onclick=changeLanguage()> English
+        <br>
+        <input type="radio" , name="language" , id="francais" onclick="changeLanguage()"> Francais <br>
+    </form>
 
 
-<ol id=”Items”>
-    <div id = "stick">
-        <li>
-            <label id="Stick">Stick</label>
-            <img src="images/hockeyStick.jpg" width = "100" height="100" alt = "Stick">
-            <p>Items Available:
-                <span id="sticksLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="stickPrice">70.00</span>
-                <span id="stickTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="stickQuantity">
-                <button type="button" id= "stickButton" onclick = "quantity('Stick','stickQuantity','sticksLeft','stickPrice','stickTax', 'stickButton')">Add to Basket! </button>
-            </p>
-            <p id = "stickAdmin"></p>
-        </li>
-    </div>
-    <div id = "bat">
-        <li>
-            <label id="Bat">Bat</label>
-            <img src="images/bat.jpg" width = "100" height="100" alt = "Bat">
-            <p>Items Available:
-                <span id="batsLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="batPrice">30.00</span>
-                <span id="batTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="batQuantity">
-                <button type="button" id= "batButton" onclick = "quantity('Bat','batQuantity','batsLeft','batPrice','batTax', 'batButton')">Add to Basket! </button>
-            </p>
-            <p id = "batAdmin"></p>
-        </li> 
-    </div>
-    <div id ="football">
-        <li>
-            <label id="Football">Football</label>
-            <img src="images/football.jpg" width = "100" height="100" alt = "Football">
-            <p>Items Available:
-                <span id="footballsLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="footballPrice">25.00</span>
-                <span id="footballTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="footballQuantity">
-                <button type="button" id= "footballButton" onclick = "quantity('Football','footballQuantity','footballsLeft','footballPrice','footballTax', 'footballButton')">Add to Basket! </button>
-            </p>
-            <p id = "footballAdmin"></p>
-        </li>
-    </div>
-    <div id = "glove">  
-        <li>
-            <label id="Glove">Glove</label>
-            <img src="images/glove.jpg" width = "100" height="100" alt = "Glove">
-            <p>Items Available:
-                <span id="glovesLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="glovePrice">40.00</span>
-                <span id="gloveTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="gloveQuantity">
-                <button type="button" id= "gloveButton" onclick = "quantity('Glove','gloveQuantity','glovesLeft','glovePrice','gloveTax', 'gloveButton')">Add to Basket! </button>
-            </p>
-            <p id = "gloveAdmin"></p>
-        </li> 
-    </div>
-    <div id = "shoes">
-        <li>
-            <label id="Shoes">Shoes</label>
-            <img src="images/shoes.jpg" width = "100" height="100" alt = "Shoes">
-            <p>Items Available:
-                <span id="shoesLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="shoePrice">120.00</span>
-                <span id="shoeTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="shoeQuantity">
-                <button type="button" id= "shoeButton" onclick = "quantity('Shoes','shoeQuantity','shoesLeft','shoePrice','shoeTax', 'shoeButton')">Add to Basket! </button>
-            </p>
-            <p id = "shoesAdmin"></p>
-        </li> 
-    </div>
-    <div id = "baseball">
-        <li>
-            <label id="Baseball">Baseball</label>
-            <img src="images/baseball.jpg" width = "100" height="100" alt = "Baseball">
-            <p>Items Available:
-                <span id="baseballsLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="baseballPrice">8.00</span>
-                <span id="baseballTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="baseballQuantity">
-                <button type="button" id= "baseballButton" onclick = "quantity('Baseball','baseballQuantity','baseballsLeft','baseballPrice','baseballTax', 'baseballButton')">Add to Basket! </button>
-            </p>
-            <p id = "baseballAdmin"></p>
-        </li> 
-    </div>
-    <div id = "puck">
-        <li>
-            <label id="Puck">Puck</label>
-            <img src="images/puck.jpg" width = "100" height="100" alt = "Puck">
-            <p>Items Available:
-                <span id="pucksLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="puckPrice">5.00</span>
-                <span id="puckTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="puckQuantity">
-                <button type="button" id= "puckButton" onclick = "quantity('Puck','puckQuantity','pucksLeft','puckPrice','puckTax', 'puckButton')">Add to Basket! </button>
-            </p>
-            <p id = "puckAdmin"></p>
-        </li> 
-    </div>
-    <div id = "basketball">
-        <li>
-            <label id="Basketball">Basketball</label>
-            <img src="images/basketball.jpg" width = "100" height="100" alt = "Basektball">
-            <p>Items Available:
-                <span id="basketballsLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="basketballPrice">45.00</span>
-                <span id="basketballTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="basketballQuantity">
-                <button type="button" id= "basketballButton" onclick = "quantity('Basketball','basketballQuantity','basketballsLeft','basketballPrice','basketballTax', 'basketballButton')">Add to Basket! </button>
-            </p>
-            <p id = "basketballAdmin"></p>
-        </li> 
-    </div>
-    <div id = "racket">
-        <li>
-            <label id="Racket">Racket</label>
-            <img src="images/racket.jpg" width = "100" height="100" alt = "Racket">
-            <p>Items Available:
-                <span id="racketsLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="racketPrice">80.00</span>
-                <span id="racketTax">0.13</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="racketQuantity">
-                <button type="button" id= "racketButton" onclick = "quantity('Racket','racketQuantity','racketsLeft','racketPrice','racketTax', 'racketButton')">Add to Basket! </button>
-            </p>
-            <p id = "racketAdmin"></p>
-        </li> 
-    </div>
-    <div id = "gatorade">
-         <li>
-            <label id="Gatorade">Gatorade</label>
-            <img src="images/gatorade.jpg" width = "100" height="100" alt = "Gatorade">
-            <p>Items Available:
-                <span id="gatoradesLeft">5</span>
-            </p>
-            <p>Price:
-                <span id="gatoradePrice">2.00</span>
-                <span id="gatoradeTax">0.00</span>
-            </p>
-            <p>Quantity
-                <input type="number" value="1" id="gatoradeQuantity">
-                <button type="button" id= "gatoradeButton" onclick = "quantity('Gatorade','gatoradeQuantity','gatoradesLeft','gatoradePrice','gatoradeTax', 'gatoradeButton')">Add to Basket! </button>
-            </p>
-            <p id = "gatoradeAdmin"></p>
-        </li> 
-    </div>
-</ol>
+    <ol id=”Items”>
+        <div id="stick">
+            <li>
+                <label id="Stick">Stick</label>
+                <img src="images/hockeyStick.jpg" width="100" height="100" alt="Stick">
+                <p>Items Available:
+                    <span id="sticksLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="stickPrice">70.00</span>
+                    <span id="stickTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="stickQuantity">
+                    <button type="button" id="stickButton" onclick="quantity('Stick','stickQuantity','sticksLeft','stickPrice','stickTax', 'stickButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="stickAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="bat">
+            <li>
+                <label id="Bat">Bat</label>
+                <img src="images/bat.jpg" width="100" height="100" alt="Bat">
+                <p>Items Available:
+                    <span id="batsLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="batPrice">30.00</span>
+                    <span id="batTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="batQuantity">
+                    <button type="button" id="batButton" onclick="quantity('Bat','batQuantity','batsLeft','batPrice','batTax', 'batButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="batAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="football">
+            <li>
+                <label id="Football">Football</label>
+                <img src="images/football.jpg" width="100" height="100" alt="Football">
+                <p>Items Available:
+                    <span id="footballsLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="footballPrice">25.00</span>
+                    <span id="footballTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="footballQuantity">
+                    <button type="button" id="footballButton" onclick="quantity('Football','footballQuantity','footballsLeft','footballPrice','footballTax', 'footballButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="footballAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="glove">
+            <li>
+                <label id="Glove">Glove</label>
+                <img src="images/glove.jpg" width="100" height="100" alt="Glove">
+                <p>Items Available:
+                    <span id="glovesLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="glovePrice">40.00</span>
+                    <span id="gloveTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="gloveQuantity">
+                    <button type="button" id="gloveButton" onclick="quantity('Glove','gloveQuantity','glovesLeft','glovePrice','gloveTax', 'gloveButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="gloveAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="shoes">
+            <li>
+                <label id="Shoes">Shoes</label>
+                <img src="images/shoes.jpg" width="100" height="100" alt="Shoes">
+                <p>Items Available:
+                    <span id="shoesLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="shoePrice">120.00</span>
+                    <span id="shoeTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="shoeQuantity">
+                    <button type="button" id="shoeButton" onclick="quantity('Shoes','shoeQuantity','shoesLeft','shoePrice','shoeTax', 'shoeButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="shoesAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="baseball">
+            <li>
+                <label id="Baseball">Baseball</label>
+                <img src="images/baseball.jpg" width="100" height="100" alt="Baseball">
+                <p>Items Available:
+                    <span id="baseballsLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="baseballPrice">8.00</span>
+                    <span id="baseballTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="baseballQuantity">
+                    <button type="button" id="baseballButton" onclick="quantity('Baseball','baseballQuantity','baseballsLeft','baseballPrice','baseballTax', 'baseballButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="baseballAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="puck">
+            <li>
+                <label id="Puck">Puck</label>
+                <img src="images/puck.jpg" width="100" height="100" alt="Puck">
+                <p>Items Available:
+                    <span id="pucksLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="puckPrice">5.00</span>
+                    <span id="puckTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="puckQuantity">
+                    <button type="button" id="puckButton" onclick="quantity('Puck','puckQuantity','pucksLeft','puckPrice','puckTax', 'puckButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="puckAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="basketball">
+            <li>
+                <label id="Basketball">Basketball</label>
+                <img src="images/basketball.jpg" width="100" height="100" alt="Basektball">
+                <p>Items Available:
+                    <span id="basketballsLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="basketballPrice">45.00</span>
+                    <span id="basketballTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="basketballQuantity">
+                    <button type="button" id="basketballButton" onclick="quantity('Basketball','basketballQuantity','basketballsLeft','basketballPrice','basketballTax', 'basketballButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="basketballAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="racket">
+            <li>
+                <label id="Racket">Racket</label>
+                <img src="images/racket.jpg" width="100" height="100" alt="Racket">
+                <p>Items Available:
+                    <span id="racketsLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="racketPrice">80.00</span>
+                    <span id="racketTax" style = "visibility: hidden">0.13</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="racketQuantity">
+                    <button type="button" id="racketButton" onclick="quantity('Racket','racketQuantity','racketsLeft','racketPrice','racketTax', 'racketButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="racketAdmin"></p>
+            </li>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="gatorade">
+            <li>
+                <label id="Gatorade">Gatorade</label>
+                <img src="images/gatorade.jpg" width="100" height="100" alt="Gatorade">
+                <p>Items Available:
+                    <span id="gatoradesLeft">5</span>
+                </p>
+                <p>Price:
+                    <span id="gatoradePrice">2.00</span>
+                    <span id="gatoradeTax" style = "visibility: hidden">0.00</span>
+                </p>
+                <p>Quantity
+                    <input type="number" value="1" id="gatoradeQuantity">
+                    <button type="button" id="gatoradeButton" onclick="quantity('Gatorade','gatoradeQuantity','gatoradesLeft','gatoradePrice','gatoradeTax', 'gatoradeButton')">Add
+                        to Basket! </button>
+                </p>
+                <p id="gatoradeAdmin"></p>
+            </li>
+        </div>
+    </ol>
 
-<h1>Basket
-    <div id="basket"></div>
-</h1>
+    <h1>Basket
+        <div id="basket"></div>
+    </h1>
 
-<button type ="button" onclick= clearBasket()> Clear Basket</button>
-<button type ="button" onclick = purchaseMade()> Buy</button>
+    <button type="button" onclick=clearBasket()> Clear Basket</button>
+    <button type="button" onclick=purchaseMade()> Buy</button>
 </body>
+
 </html>
